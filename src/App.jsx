@@ -4,41 +4,43 @@ import { motion } from "framer-motion";
 import { RotateCcw } from "lucide-react";
 import "./style.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 const ASSETS = {
-  home: "/images/home.png",
-  logo: "/images/logo.png",
-  bg1: "/images/bg1.png",
-  bg2: "/images/bg2.png",
+  home: BASE + "images/home.png",
+  logo: BASE + "images/logo.png",
+  bg1: BASE + "images/bg1.png",
+  bg2: BASE + "images/bg2.png",
 };
 
 const quiz = {
   results: {
     dove: {
       name: "自由的粉紅鴿子",
-      image: "/images/dove.png",
+      image: BASE + "images/cat.png",
       description: "你像一隻自由飛行的粉紅鴿，人生沒有標準答案。你不一定照著大家期待的路走，但總能找到最舒服的方向。",
     },
     unicorn: {
       name: "浪漫獨角獸",
       images: [
-        "/images/unicorn.png",
-        "/images/unicorn1.png"
+        BASE + "/images/unicorn.png",
+        BASE + "/images/unicorn1.png"
       ],
       description: "你自帶粉紅泡泡濾鏡，總能在日常裡發現浪漫。對你來說，青春不是行程表，而是一場閃閃發光的相遇。",
     },
     star: {
       name: "神秘星星",
-      image: "/images/star.png",
+      image: BASE + "/images/star.png",
       description: "你看起來冷靜又有點厭世，但其實很清楚自己要什麼。你不一定熱情外放，卻有自己的宇宙和節奏。",
     },
     happy: {
       name: "快樂 Happy 小天使",
-      image: "/images/dog.png",
+      image: BASE + "/images/dog.png",
       description: "你是校園裡的正能量代表，遇到事情總能用可愛又堅定的方式面對，你的存在對竹女的大家本身就很有安定感。\n無論何時你都能在草原上無憂無慮地奔跑。至：和我們一起畢業的Happy",
     },
     cat: {
       name: "傲嬌小橘渣男",
-      image: "/images/cat.png",
+      image: BASE + "/images/cat.png",
       description: "你嘴上可能很嗆，心裡其實超在乎。\n你有自己的個性和底線，不輕易被馴服\n，但熟了之後超可愛。\n摸完或吃完食物的你總是轉身就走因此被戲稱渣男，而一直出現在校園的你，早已被我們當竹女的一員。\n至：天上的傲嬌小橘/OK貓",
     },
   },
