@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #f7e7f3;
+  font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+button {
+  font-family: inherit;
+}
+
+.phone {
+  position: relative;
+  width: 100vw;
+  max-width: 480px;
+  min-height: 100dvh;
+  height: 100dvh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f7e7f3;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-page {
+  min-height: 100dvh;
+  height: 100dvh;
+}
+
+
+/* 透明點擊區：直接壓在底圖原本「回到高一」按鈕上 */
+.start-hitbox {
+  position: absolute;
+  z-index: 10;
+  left: 48%;
+  top: 63.5%;
+  width: min(40%, 310px);
+  height: clamp(48px, 7vh, 64px);
+  transform: translateX(-50%);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quiz-page,
+.result-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  height: 100dvh;
+  padding: clamp(18px, 5vw, 28px) clamp(14px, 4vw, 18px);
+}
+
+.question-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: clamp(20px, 5vw, 24px) clamp(16px, 5vw, 20px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 18px 45px rgba(120, 90, 160, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.progress {
+  margin-bottom: 14px;
+  text-align: center;
+  color: #8f7aaa;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+}
+
+.question-card h1 {
+  margin: 0 0 24px;
+  color: #5d4b7e;
+  font-size: clamp(20px, 5.5vw, 23px);
+  line-height: 1.65;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+.options button {
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #5d4b7e;
+  font-size: clamp(15px, 4.5vw, 17px);
+  font-weight: 700;
+  line-height: 1.45;
+  box-shadow: 0 8px 18px rgba(120, 90, 160, 0.1);
+  cursor: pointer;
+}
+
+.options button:active {
+  transform: scale(0.98);
+}
+
+.result-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 34px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 18px 45px rgba(120, 90, 160, 0.16);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.emoji {
+  font-size: 72px;
+}
+
+.label {
+  margin: 12px 0 0;
+  color: #9d89ba;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+}
+
+.result-card h1 {
+  margin: 14px 0;
+  color: #5d4b7e;
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+.desc {
+  margin: 0 auto 24px;
+  max-width: 320px;
+  color: #665579;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #6b5790;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(120, 90, 160, 0.12);
+  cursor: pointer;
+}
+
+
+.first-answer {
+  color: #D3A4FF;
+}
+
+@media (max-height: 700px) {
+  .question-card {
+    padding: 18px 16px;
+  }
+
+  .question-card h1 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  .options {
+    gap: 9px;
+  }
+
+  .options button {
+    min-height: 48px;
+    padding: 11px 14px;
+  }
+
+  .result-image {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+
+  .result-images{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  
+  .result-description{
+   white-space: pre-line;
+  }
+
+  .cat-image{
+    width: 260px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .unicorn-image{
+    width: 260px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+.star-image{
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.happy-image{
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.dove-image{
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+}
