@@ -209,11 +209,18 @@ function App() {
             <img className="result-image" src="/images/unicorn1.png" />
           </div>
         ) : (
-      <img
-        className={`result-image ${final.key}-image`}
-        src={final.result.image}
-        alt={final.result.name}
-      />
+      {final.key === "unicorn" ? (
+        <div className="result-images">
+          <img className="result-image" src={BASE + "images/unicorn.png"} />
+          <img className="result-image" src={BASE + "images/unicorn1.png"} />
+        </div>
+      ) : (
+        <img
+          className={`result-image ${final.key}-image`}
+          src={final.result.image}
+          alt={final.result.name}
+        />
+      )}
         )}
         <p className="label">你的時空裂縫結果是</p>
         <h1>{final.result.name}</h1>
