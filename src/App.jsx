@@ -11,6 +11,7 @@ return (
 
       {final.key === "unicorn" ? (
         <div className="result-images">
+
           <img
             className="result-image unicorn-image"
             src={BASE + "images/unicorn.png"}
@@ -22,6 +23,7 @@ return (
             src={BASE + "images/unicorn1.png"}
             alt="浪漫獨角獸"
           />
+
         </div>
       ) : (
         <img
