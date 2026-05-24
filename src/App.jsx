@@ -51,7 +51,7 @@ const quiz = {
       options: [
         { text: "未來的自己", type: "star" },
         { text: "過往的朋友", type: "unicorn" },
-        { text: "阿忠組長", type: "happy" },
+        { text: "阿忠老師", type: "happy" },
         { text: "天神", type: "dove" },
         { text: "竹女交流群的各位", type: "cat" },
       ],
