@@ -47,8 +47,6 @@ button {
   height: 100dvh;
 }
 
-
-/* 透明點擊區：直接壓在底圖原本「回到高一」按鈕上 */
 .start-hitbox {
   position: absolute;
   z-index: 10;
@@ -103,6 +101,10 @@ button {
   white-space: pre-line;
 }
 
+.first-answer {
+  color: #D3A4FF;
+}
+
 .options {
   display: grid;
   gap: 12px;
@@ -130,31 +132,76 @@ button {
 .result-card {
   position: relative;
   z-index: 2;
-  width: 100%;
-  padding: 34px 24px;
+  width: min(88vw, 390px);
+  max-height: 92dvh;
+  padding: clamp(22px, 5vw, 34px) clamp(20px, 5vw, 28px);
   border: 1px solid rgba(255, 255, 255, 0.62);
   border-radius: 32px;
   background: rgba(255, 255, 255, 0.68);
   box-shadow: 0 18px 45px rgba(120, 90, 160, 0.16);
   backdrop-filter: blur(12px);
   text-align: center;
+  overflow-y: auto;
 }
 
-.emoji {
-  font-size: 72px;
+.result-image {
+  display: block;
+  width: min(58vw, 240px);
+  max-height: 26dvh;
+  object-fit: contain;
+  margin: 0 auto clamp(14px, 3vh, 24px);
+}
+
+.result-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(8px, 3vw, 16px);
+  margin-bottom: clamp(14px, 3vh, 24px);
+}
+
+.result-images .result-image {
+  width: min(38vw, 150px);
+  max-height: 23dvh;
+  margin: 0;
+}
+
+.cat-image {
+  width: min(68vw, 280px);
+  max-height: 28dvh;
+}
+
+.unicorn-image {
+  width: min(38vw, 150px);
+  max-height: 23dvh;
+}
+
+.star-image {
+  width: min(55vw, 220px);
+  max-height: 26dvh;
+}
+
+.happy-image {
+  width: min(65vw, 260px);
+  max-height: 28dvh;
+}
+
+.dove-image {
+  width: min(65vw, 260px);
+  max-height: 28dvh;
 }
 
 .label {
   margin: 12px 0 0;
   color: #9d89ba;
-  font-size: 13px;
+  font-size: clamp(12px, 3.5vw, 14px);
   letter-spacing: 0.25em;
 }
 
 .result-card h1 {
-  margin: 14px 0;
+  margin: 12px 0;
   color: #5d4b7e;
-  font-size: 34px;
+  font-size: clamp(28px, 8vw, 38px);
   line-height: 1.25;
 }
 
@@ -162,8 +209,9 @@ button {
   margin: 0 auto 24px;
   max-width: 320px;
   color: #665579;
-  font-size: 16px;
+  font-size: clamp(15px, 4vw, 17px);
   line-height: 1.9;
+  white-space: pre-line;
 }
 
 .retry {
@@ -179,11 +227,6 @@ button {
   font-weight: 800;
   box-shadow: 0 10px 24px rgba(120, 90, 160, 0.12);
   cursor: pointer;
-}
-
-
-.first-answer {
-  color: #D3A4FF;
 }
 
 @media (max-height: 700px) {
@@ -205,62 +248,4 @@ button {
     min-height: 48px;
     padding: 11px 14px;
   }
-
-  .result-image {
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-    margin-bottom: 12px;
-  }
-
-  .result-images{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-bottom:20px;
-  }
-  
-  .result-description{
-   white-space: pre-line;
-  }
-
-  .cat-image{
-    width: 260px;
-    height: auto;
-    object-fit: contain;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .unicorn-image{
-    width: 260px;
-    height: auto;
-    object-fit: contain;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-.star-image{
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.happy-image{
-  width: 260px;
-  height: auto;
-  object-fit: contain;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.dove-image{
-  width: 260px;
-  height: auto;
-  object-fit: contain;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 }
