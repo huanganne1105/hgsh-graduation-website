@@ -80,9 +80,9 @@ const quiz = {
       text: "請選擇你的午餐",
       options: [
         { text: "OK", type: "cat" },
-        { text: "60/80 的學校團膳", type: "happy" },
+        { text: "便當", type: "happy" },
         { text: "訂外送", type: "dove" },
-        { text: "外訂便當：胡爸、乃家媽媽……", type: "unicorn" },
+        { text: "自己帶午餐", type: "unicorn" },
         { text: "不吃", type: "star" },
       ],
     },
