@@ -26,17 +26,19 @@ button {
 
 .phone {
   position: relative;
-  width: 100%;
-  max-width: 480px;
+
+  width: 100vw;
+
   min-height: 100vh;
   min-height: 100dvh;
+
   height: 100vh;
   height: 100dvh;
-  margin: 0 auto;
+
   overflow: hidden;
+
   background: #f7e7f3;
 }
-
 .bg {
   position: absolute;
   inset: 0;
