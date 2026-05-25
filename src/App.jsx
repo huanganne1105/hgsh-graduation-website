@@ -12,6 +12,10 @@ const ASSETS = {
   bg1: BASE + "images/bg1.png",
   bg2: BASE + "images/bg2.png",
 };
+Object.values(ASSETS).forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
 const RESULT_IMAGES = [
   BASE + "images/cat.png",
   BASE + "images/dove.png",
