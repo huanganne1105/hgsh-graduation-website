@@ -50,14 +50,18 @@ button {
 .start-hitbox {
   position: absolute;
   z-index: 10;
-  left: 48%;
-  top: 63.5%;
-  width: min(40%, 310px);
-  height: clamp(48px, 7vh, 64px);
+
+  left: 49.2%;
+  top: 60.8%;
+
+  width: min(34%, 250px);
+  height: clamp(42px, 6vh, 56px);
+
   transform: translateX(-50%);
+
   border: 0;
   border-radius: 999px;
-  background: transparent;
+  background: rgba(255,0,0,0.35);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
