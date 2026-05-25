@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { motion } from "framer-motion";
 import { RotateCcw } from "lucide-react";
 import "./style.css";
+import React, { useEffect, useState } from "react";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -158,6 +159,23 @@ function pickResult(answers) {
 }
 
 function App() {
+   useEffect(() => {
+    const preloadImages = [
+      ASSETS.home,
+      ASSETS.logo,
+      ASSETS.bg1,
+      ASSETS.bg2,
+      BASE + "images/cat.png",
+      BASE + "images/dog.png",
+      BASE + "images/dove.png",
+      BASE + "images/star.png",
+      BASE + "images/unicorn.png",
+      BASE + "images/unicorn1.png",
+      preloadImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+        });
+      }, []);
   const [page, setPage] = useState("home");
   const [answers, setAnswers] = useState([]);
   const [firstAnswer, setFirstAnswer] = useState("");
