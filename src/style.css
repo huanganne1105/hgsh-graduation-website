@@ -52,7 +52,7 @@ button {
   z-index: 10;
 
   left: 49.2%;
-  top: 60.8%;
+  top: 70.8%;
 
   width: min(34%, 250px);
   height: clamp(42px, 6vh, 56px);
