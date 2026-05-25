@@ -12,6 +12,19 @@ const ASSETS = {
   bg1: BASE + "images/bg1.png",
   bg2: BASE + "images/bg2.png",
 };
+const RESULT_IMAGES = [
+  BASE + "images/cat.png",
+  BASE + "images/dove.png",
+  BASE + "images/dog.png",
+  BASE + "images/star.png",
+  BASE + "images/unicorn.png",
+  BASE + "images/unicorn1.png",
+];
+
+RESULT_IMAGES.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
 
 const quiz = {
   results: {
